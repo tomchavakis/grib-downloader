@@ -15,19 +15,19 @@ You can download the following data
 ### Docker Build
 ```
 Development
-docker build -f Dockerfile.remote -t weather-downloader-dev .
+docker build -f Dockerfile.remote -t grib-downloader-dev .
 
 Production
-docker build -t weather-downloader .
+docker build -t grib-downloader .
 ```
 
 ### Remote development 
 ```
 Windows
-docker run -it --name dev-weather -v "C:\Projects\weather":/app weather-downloader-dev
+docker run -it --name dev-grib -v "C:\Projects\grib-downloader":/app grib-downloader-dev
 
 Linux
-docker run -it --name dev-weather -v "$(pwd)"/target:/app weather-downloader-dev
+docker run -it --name dev-grib -v "$(pwd)"/target:/app grib-downloader-dev
 
 # install dependencies
 root@e276c0662796: pip3 install -r requirements.txt
@@ -37,14 +37,15 @@ $python3 app.py
 ### Run Docker Production
 
 ```
+docker run -d grib-downloader
 ```
 
 
-In the output folder (default: /tmp/weather/)
+In the output folder (default: /tmp/grib/)
 
 ### Output:
 ```
-/tmp/weather/(wind,pressure,temp)
+/tmp/grib/(wind,pressure,temp)
   - 20220202 (date)
     - 12 (run 0,6,12,18)
       - gfs.f000.grb2

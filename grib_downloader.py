@@ -1,7 +1,7 @@
 '''
 Editor: Thomas Chavakis
 Year: 2022
-Description: Download the weather (wind,pressure,temperature) from the nomads NOAA site.
+Description: Download the grib files (wind,pressure,temperature) from the nomads NOAA site.
 The forecasting runs every 6 hours 
 The results of every run uploaded to nomads after 3,4 hours or even more.
 '''

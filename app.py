@@ -18,19 +18,19 @@ Output folder structure
 '''
 
 import threading
-import weather_downloader
+import grib_downloader
 
 
 def download_pressure(levelOfDetail):
-  weather_downloader.download_gfs(levelOfDetail, "PRES", "lev_80_m_above_ground", "/tmp/weather/pressure/")
+  grib_downloader.download_gfs(levelOfDetail, "PRES", "lev_80_m_above_ground", "/tmp/grib/pressure/")
   threading.Timer(20.0, updateGribFiles, [levelOfDetail]).start()
 
 def download_wind(levelOfDetail):
-  weather_downloader.download_gfs(levelOfDetail, "UGRD,VGRD", "lev_10_m_above_ground", "/tmp/weather/wind/")
+  grib_downloader.download_gfs(levelOfDetail, "UGRD,VGRD", "lev_10_m_above_ground", "/tmp/grib/wind/")
   threading.Timer(20.0, updateGribFiles, [levelOfDetail]).start()
 
 def download_temperature(levelOfDetail):
-  weather_downloader.download_gfs(levelOfDetail, "TMP", "lev_surface", "/tmp/weather/temp/")
+  grib_downloader.download_gfs(levelOfDetail, "TMP", "lev_surface", "/tmp/grib/temp/")
   threading.Timer(20.0, updateGribFiles, [levelOfDetail]).start()
 
 

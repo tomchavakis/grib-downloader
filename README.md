@@ -1,6 +1,6 @@
-## Weather Downloader
+## Grib Downloader
 
-This tool can be used to download the daily latest weather data from the [NOMADS-NOAA](https://nomads.ncep.noaa.gov) Operational Model Archive and Distribution System.
+This tool can be used to download the daily latest grib data from the [NOMADS-NOAA](https://nomads.ncep.noaa.gov) Operational Model Archive and Distribution System.
 
 
 ### Features
